@@ -3,17 +3,30 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #f4f4f9; 
 }
 
 .logo {
   height: 6em;
+  width: 6em; 
   padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  border-radius: 50%; 
+  background-color: #646cff; 
+  color: #fff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 300ms ease;
+  will-change: transform, filter; 
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.1);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -35,8 +48,61 @@
 
 .card {
   padding: 2em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  transition: all 0.3s ease; 
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px); 
 }
 
 .read-the-docs {
   color: #888;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
 }
+
+.read-the-docs:hover {
+  color: #646cff;
+}
+
+h1, h2 {
+  margin-top: 1rem;
+  color: #333; 
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 4em;
+    width: 4em;
+    font-size: 1.5rem; /
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
